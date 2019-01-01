@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>Restaurant</title>
+<style>
+#div_resume {
+  background-color:#6699FF; 
+  border: 2px solid; 
+  padding: 5px;
+}
+</style>
+
+</head>
+
+<body style="background-image:url(img/rest/404.png); ">
+<script src="js-reservation/jquery.js"></script>
+<script src="js-reservation/util.js"></script>
+<script src="js-reservation/datePicker.js"></script>
+<link rel="stylesheet" href="css-reservation/datePicker.css" type="text/css"> 
+<link rel="stylesheet" href="css-reservation/styles.css">
+<h1>Commandez votre table 🍽️🥘🍰  </h1>
+<p>Ce formulaire permet de commander une table dans notre restaurant, ensuite vous pouvez commande vos plats. Il faudra aussi indiquer vos coordonn&eacute;es et dans le cas de plusieurs personne, indiquer le nom de chacun d'entre eux.</p>
+<form id="form1" name="form1" method="post" action="">
+  <span>Table pour combien de personnes ? 
+    <select name="nbp" id="nbp">
+      <option value="-1">--Veuillez choisir---</option>
+      <option value="1">Une place</option>
+      <option value="2">Deux places</option>
+      <option value="4">4 places</option>
+      <option value="6">6 places</option>
+    </select>
+  </span>
+    <br />
+    <div id="chaises">
+    </div>
+
+    <br />
+    <span> A quelle date vous allez venir ? 
+<input name="date" type="text" id="date" value="" />
+</span>
+<br />
+
+<hr/>
+
+
+<h2>Vos coordon&eacute;es</h2>
+<span>Civilit&eacute; : </span>
+<input name="civilite" type="radio" value="mme" />
+Madamme 
+<input name="civilite" type="radio" value="mlle" />
+Mademoiselle 
+<input name="civilite" type="radio" value="m" />
+Monsieur 
+<br />
+<span>Nom et pr&eacute;nom  : </span>
+  <input name="nom" type="text" id="nom" size="60" />
+
+<br />
+<span>N&deg; de t&eacute;l&eacute;phone : </span>
+<input name="tel" type="text" id="tel" />
+<br />
+<div id="div_accompagnateurs"> <span>Liste des accompagnateurs (une personne par ligne):</span>
+  <br />
+  <textarea name="accompagnateurs" cols="60" rows="4" id="accompagnateurs"></textarea>
+  <br />
+</div>
+
+
+<hr />
+
+
+
+<h2>Que voulez-vous manger ?  </h2>
+<label>
+<input name="cmd" type="checkbox" value="Salade" data-prix="5" />
+Salade</label>
+<label> <br />
+<input name="cmd" type="checkbox" value="Soupe" data-prix="2.5" />
+Soupe </label>
+<br />
+<label>
+<input name="cmd" type="checkbox" value="Couscous" data-prix="15.5" />
+Couscous</label>
+<br />
+<label>
+<input name="cmd" type="checkbox" value="Riz" data-prix="12" />
+Riz</label>
+<br />
+<label>
+<input name="cmd" type="checkbox" value="Fruits" data-prix="7" />
+Fruits </label>
+<label> <br />
+<input name="cmd" type="checkbox" value="Gateaux" data-prix="6.4" />
+Gateaux</label>
+<hr /> 
+
+  <br />
+  <input name="b1" type="button" id="b1" value="Valider ma commande" />
+  <br />
+  <br />
+
+  <div id="div_resume"  >
+    Afficher le r&eacute;sum&eacute; ici ...
+  </div>
+  <p>&nbsp;</p>
+</form>
+
+</body>
+
+<!-- Les code Javascript CI-DESSOUS uniquement -->
+<script>
+
+</script>
+
+</html>
